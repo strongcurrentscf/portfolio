@@ -3,7 +3,9 @@
     "baseUrl": "./src", // Base directory for module resolution set to 'src'
     "paths": {
       "components/*": ["components/*"], // Alias for components folder
-      "lib/*": ["lib/*"] // Alias for lib folder, add others as needed
+      "lib/*": ["lib/*"], // Alias for lib folder
+      "context/*": ["context/*"], // Alias for context folder
+      "hooks/*": ["hooks/*"] // Alias for hooks folder
     }
   },
   "files": [],

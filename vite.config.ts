@@ -7,7 +7,9 @@ export default defineConfig({
   resolve: {
     alias: {
       components: path.resolve(__dirname, "src/components"), // Alias for 'components'
-      lib: path.resolve(__dirname, "src/lib"), // Alias for 'lib' (if needed)
+      lib: path.resolve(__dirname, "src/lib"), // Alias for 'lib'
+      context: path.resolve(__dirname, "src/context"), // Alias for 'context'
+      hooks: path.resolve(__dirname, "src/hooks"), // Alias for 'hooks'
     },
   },
 });
