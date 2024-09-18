@@ -1,4 +1,4 @@
-import { BackgroundAnimation, Header } from "./components";
+import { BackgroundAnimation, Header } from "components";
 
 export default function App() {
   return (

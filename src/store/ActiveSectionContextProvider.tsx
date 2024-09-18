@@ -1,5 +1,5 @@
 import { useState, createContext } from "react";
-import { links } from "../lib";
+import { links } from "lib";
 
 export type ActiveSectionType = (typeof links)[number]["name"] | null;
 
