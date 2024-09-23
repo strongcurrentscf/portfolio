@@ -106,7 +106,7 @@ export default function BaldManAnimation() {
           initial={{ opacity: 0, x: 0, y: 100, scale: 0 }}
           animate={{
             x: [0, 350], // Move to the center
-            y: [100, 50],
+            y: [100, 33],
             opacity: [0, 1], // Fade in
             scale: 1,
           }}
@@ -123,6 +123,7 @@ export default function BaldManAnimation() {
               backgroundSize: "cover",
               borderRadius: "50%", // Circular
             }}
+            aria-label="Christian's profile picture"
           ></div>
         </motion.foreignObject>
 
