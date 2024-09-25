@@ -4,6 +4,7 @@ import {
   Header,
   Intro,
   SectionDivider,
+  Projects,
 } from "components";
 import { ActiveSectionContextProvider } from "context";
 
@@ -17,6 +18,7 @@ export default function App() {
           <Intro />
           <SectionDivider />
           <AboutMe />
+          <Projects />
         </main>
       </ActiveSectionContextProvider>
     </>
