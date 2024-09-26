@@ -51,7 +51,7 @@ export default function Experience() {
   );
 }
 
-function TimelineCard({ value }: { value: any }) {
+function TimelineCard({ value }: { value: (typeof experiencesData)[number] }) {
   return (
     <>
       <div className="order-1 hidden sm:block sm:w-5/12"></div>
