@@ -5,6 +5,7 @@ import {
   Intro,
   SectionDivider,
   Projects,
+  Skills,
 } from "components";
 import { ActiveSectionContextProvider } from "context";
 
@@ -19,6 +20,7 @@ export default function App() {
           <SectionDivider />
           <AboutMe />
           <Projects />
+          <Skills />
         </main>
       </ActiveSectionContextProvider>
     </>
