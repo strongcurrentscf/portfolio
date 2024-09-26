@@ -60,3 +60,26 @@ export const projectsData = [
     link: "https://forkify-christian.netlify.app/",
   },
 ] as const;
+
+export const skills = [
+  "HTML/CSS",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Node.js",
+  "Material UI",
+  "Chakra UI",
+  "Ant Design",
+  "Tailwind",
+  "Prisma",
+  "MongoDB",
+  "Redux",
+  "Zustand",
+  "Express",
+  "Storybook",
+  "Framer Motion",
+  "Jest/React Testing Library",
+  "Python",
+  "FastAPI",
+] as const;
