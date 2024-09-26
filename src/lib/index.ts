@@ -1,1 +1,1 @@
-export { links, projectsData, skills } from "./data";
+export { links, projectsData, skills, experiencesData } from "./data";
