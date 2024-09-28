@@ -2,6 +2,8 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
 import forkifyImg from "/forkifyImg.png";
+import portfolioImg from "/portfolioImg.png";
+import spacexImg from "/spacexImg.png";
 
 export const links = [
   {
@@ -36,6 +38,15 @@ export const links = [
 
 export const projectsData = [
   {
+    title: "SpaceX Launch Tracker",
+    description:
+      "Displays information about SpaceX launches using the public SpaceX API.",
+    tags: ["React", "GraphQL", "Apollo", "TypeScript", "React Hooks"],
+    imageUrl: spacexImg,
+    repository: "https://github.com/strongcurrentscf/forkify-recipe-app",
+    link: "https://forkify-christian.netlify.app/",
+  },
+  {
     title: "Forkify Recipe App",
     description:
       "Forkify is a vanilla JavaScript app that interacts with the food2fork API to fetch and display recipe food data. This app uses modern JavaScript tools, such as Webpack to bundle the modules, and Babel to convert to ES5.",
@@ -45,22 +56,13 @@ export const projectsData = [
     link: "https://forkify-christian.netlify.app/",
   },
   {
-    title: "Node Services",
+    title: "Portfolio",
     description:
-      "Forkify is a vanilla JavaScript app that interacts with the food2fork API to fetch and display recipe food data. This app uses modern JavaScript tools, such as Webpack to bundle the modules, and Babel to convert to ES5.",
-    tags: ["JavaScript", "Sass", "Webpack", "Babel", "AJAX"],
-    imageUrl: forkifyImg,
-    repository: "https://github.com/strongcurrentscf/forkify-recipe-app",
-    link: "https://forkify-christian.netlify.app/",
-  },
-  {
-    title: "Forkify Recipe App 2",
-    description:
-      "Forkify is a vanilla JavaScript app that interacts with the food2fork API to fetch and display recipe food data. This app uses modern JavaScript tools, such as Webpack to bundle the modules, and Babel to convert to ES5.",
-    tags: ["JavaScript", "Sass", "Webpack", "Babel", "AJAX"],
-    imageUrl: forkifyImg,
-    repository: "https://github.com/strongcurrentscf/forkify-recipe-app",
-    link: "https://forkify-christian.netlify.app/",
+      "Portfolio showcasing my skills and experience, with options for visitors to learn more and get in touch with me.",
+    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+    imageUrl: portfolioImg,
+    repository: "https://github.com/Ayaz2589/portfolio",
+    link: "https://portfolio-ayaz2589.vercel.app/",
   },
 ] as const;
 
