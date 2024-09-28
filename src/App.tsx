@@ -7,6 +7,7 @@ import {
   Projects,
   Skills,
   Experience,
+  Contact,
 } from "components";
 import { ActiveSectionContextProvider } from "context";
 
@@ -23,6 +24,7 @@ export default function App() {
           <Projects />
           <Skills />
           <Experience />
+          <Contact />
         </main>
       </ActiveSectionContextProvider>
     </>
