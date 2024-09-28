@@ -45,7 +45,7 @@ export default function Project({
             ))}
           </ul>
           <div className="mt-10">
-            {title === "Node Services" ? (
+            {title === "SpaceX Launch Tracker" ? (
               <button
                 type="button"
                 className="mb-2 me-2 rounded-full bg-gray-800 px-4 py-2 text-xs text-white focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:focus:ring-gray-700"
