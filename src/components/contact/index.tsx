@@ -10,9 +10,12 @@ export default function Contact() {
 
   const [senderEmail, setSenderEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [pending, setPending] = useState<boolean>(false);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+
+    setPending(true);
 
     try {
       const response = await axios.post("/.netlify/functions/sendEmail", {
@@ -30,6 +33,8 @@ export default function Contact() {
     } catch (error) {
       toast.error("An error occurred while sending the email.");
       console.log(error);
+    } finally {
+      setPending(false);
     }
   };
 
@@ -84,7 +89,7 @@ export default function Contact() {
           required
           maxLength={5000}
         />
-        <SubmitBtn />
+        <SubmitBtn pending={pending} />
       </form>
     </motion.section>
   );

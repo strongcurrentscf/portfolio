@@ -11,3 +11,4 @@ export { default as Skills } from "./skills";
 export { default as Experience } from "./experience";
 export { default as Contact } from "./contact";
 export { default as SubmitBtn } from "./submit-btn";
+export { default as Footer } from "./footer";
