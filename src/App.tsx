@@ -10,6 +10,7 @@ import {
   Contact,
 } from "components";
 import { ActiveSectionContextProvider } from "context";
+import { Toaster } from "react-hot-toast";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
           <Experience />
           <Contact />
         </main>
+        <Toaster position="top-right" />
       </ActiveSectionContextProvider>
     </>
   );
