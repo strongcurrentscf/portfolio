@@ -5,7 +5,8 @@
       "components/*": ["components/*"], // Alias for components folder
       "lib/*": ["lib/*"], // Alias for lib folder
       "context/*": ["context/*"], // Alias for context folder
-      "hooks/*": ["hooks/*"] // Alias for hooks folder
+      "hooks/*": ["hooks/*"], // Alias for hooks folder
+      "email/*": ["email/*"] // Alias for email folder
     }
   },
   "files": [],

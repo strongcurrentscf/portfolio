@@ -10,6 +10,7 @@ export default defineConfig({
       lib: path.resolve(__dirname, "src/lib"), // Alias for 'lib'
       context: path.resolve(__dirname, "src/context"), // Alias for 'context'
       hooks: path.resolve(__dirname, "src/hooks"), // Alias for 'hooks'
+      email: path.resolve(__dirname, "src/email"), // Alias for 'email'
     },
   },
 });
