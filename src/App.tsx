@@ -8,6 +8,7 @@ import {
   Skills,
   Experience,
   Contact,
+  Footer,
 } from "components";
 import { ActiveSectionContextProvider } from "context";
 import { Toaster } from "react-hot-toast";
@@ -26,6 +27,7 @@ export default function App() {
           <Skills />
           <Experience />
           <Contact />
+          <Footer />
         </main>
         <Toaster position="top-right" />
       </ActiveSectionContextProvider>
