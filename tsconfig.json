@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "jsx": "react-jsx",
     "baseUrl": "./src", // Base directory for module resolution set to 'src'
     "paths": {
       "components/*": ["components/*"], // Alias for components folder
