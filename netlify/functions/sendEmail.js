@@ -1,7 +1,7 @@
 import { createElement } from "react";
 import { Resend } from "resend";
 import { renderToStaticMarkup } from "react-dom/server";
-import { ContactFormEmail } from "../../src/email";
+import { ContactFormEmail } from "../../src/email/contact-form-email";
 import dotenv from "dotenv";
 
 dotenv.config(); // Make sure to load environment variables
