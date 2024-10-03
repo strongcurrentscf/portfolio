@@ -2,7 +2,6 @@ import { useRef } from "react";
 import { projectsData } from "lib";
 import { useScroll, motion, useTransform } from "framer-motion";
 
-// Define the type for the props using the type from `projectsData`
 type ProjectProps = (typeof projectsData)[number];
 
 export default function Project({
@@ -15,7 +14,6 @@ export default function Project({
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
 
-  // Set up the scroll animation
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1.33 1"],
@@ -30,15 +28,19 @@ export default function Project({
       style={{ scale, opacity }}
       className="relative mb-3 last:mb-0 sm:mb-8"
     >
-      <section className="relative m-auto max-w-[95%] overflow-hidden rounded-xl bg-gray-100/60 shadow-sm transition group-even:pl-8 sm:h-[26rem] sm:max-w-[42rem] sm:pr-8">
+      <section className="relative m-auto max-w-[95%] overflow-hidden rounded-xl bg-gray-100/60 shadow-sm transition group-even:pl-8 sm:h-[26rem] sm:max-w-[42rem] sm:pr-8 dark:bg-gray-800/60 dark:shadow-gray-900">
         <div className="flex h-full flex-col px-5 pb-7 pt-4 group-even:ml-[18rem] sm:max-w-[50%] sm:pl-10 sm:pr-2 sm:pt-10">
-          <h3 className="text-left text-2xl font-semibold">{title}</h3>
-          <p className="mt-2 leading-relaxed text-gray-700">{description}</p>
+          <h3 className="text-left text-2xl font-semibold dark:text-gray-200">
+            {title}
+          </h3>
+          <p className="mt-2 leading-relaxed text-gray-700 dark:text-gray-300">
+            {description}
+          </p>
           <ul className="mt-4 flex flex-wrap gap-2 sm:mt-auto">
             {tags.map((tag: string) => (
               <li
                 key={tag}
-                className="rounded-full bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white"
+                className="rounded-full bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white dark:bg-white/10 dark:text-gray-200"
               >
                 {tag}
               </li>
@@ -79,7 +81,7 @@ export default function Project({
         <img
           src={imageUrl}
           alt={title}
-          className="absolute -right-40 top-8 hidden w-[28.25rem] rounded-t-lg shadow-2xl transition hover:-translate-x-3 hover:translate-y-3 hover:-rotate-6 hover:scale-[1.04] group-even:-left-40 group-even:right-[initial] sm:block"
+          className="absolute -right-40 top-8 hidden w-[28.25rem] rounded-t-lg shadow-2xl transition hover:-translate-x-3 hover:translate-y-3 hover:-rotate-6 hover:scale-[1.04] group-even:-left-40 group-even:right-[initial] sm:block dark:shadow-gray-900"
         />
       </section>
     </motion.div>

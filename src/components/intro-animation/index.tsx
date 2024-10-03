@@ -102,7 +102,7 @@ export default function BaldManAnimation() {
           y="0"
           width="120"
           height="120"
-          className="h-34 w-34 rounded-full object-cover border-[0.25rem] border-white shadow-xl"
+          className="h-34 w-34 rounded-full object-cover border-[0.25rem] border-white dark:border-gray-200 shadow-xl"
           initial={{ opacity: 0, x: 0, y: 100, scale: 0 }}
           animate={{
             x: [0, 350], // Move to the center
