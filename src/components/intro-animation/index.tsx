@@ -1,8 +1,21 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function BaldManAnimation() {
   const imageUrl =
     "https://avatars.githubusercontent.com/u/76409685?s=400&u=b73f36d512c82236ae1b5334cd2f8a12a76a4083&v=4";
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if the screen is mobile-sized
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640); // Tailwind's sm breakpoint
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="w-full h-[200px] relative overflow-hidden">
@@ -100,16 +113,17 @@ export default function BaldManAnimation() {
         <motion.foreignObject
           x="0"
           y="0"
-          width="120"
-          height="120"
-          className="h-34 w-34 rounded-full object-cover border-[0.25rem] border-white dark:border-gray-200 shadow-xl"
+          width={isMobile ? "192" : "120"} // Adjust size for mobile
+          height={isMobile ? "192" : "120"} // Adjust size for mobile
+          className="rounded-full object-cover border-[0.25rem] border-white dark:border-gray-200 shadow-sm"
           initial={{ opacity: 0, x: 0, y: 100, scale: 0 }}
           animate={{
-            x: [0, 350], // Move to the center
-            y: [100, 33],
-            opacity: [0, 1], // Fade in
+            x: isMobile ? [300] : [0, 340], // Different values for mobile
+            y: isMobile ? [100, 0] : [100, 33],
+            opacity: [0, 1],
             scale: 1,
           }}
+          viewport={{ once: true }}
           transition={{
             duration: 0.875,
             ease: "easeInOut",
