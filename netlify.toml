@@ -3,6 +3,9 @@
   publish = "dist"
   functions = "netlify/functions"
 
+[functions]
+  node_bundler = "esbuild"  # Use esbuild to bundle functions
+
 [dev]
   framework = "vite"
   command = "npm run dev"
