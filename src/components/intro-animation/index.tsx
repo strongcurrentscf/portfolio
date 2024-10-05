@@ -7,24 +7,18 @@ export default function BaldManAnimation() {
 
   const [isMobile, setIsMobile] = useState(false);
 
-  // Use matchMedia for more accurate mobile detection
+  // Check if the screen is mobile-sized
   useEffect(() => {
-    const mobileMediaQuery = window.matchMedia("(max-width: 640px)");
     const handleResize = () => {
-      setIsMobile(mobileMediaQuery.matches);
+      setIsMobile(window.innerWidth < 640); // Tailwind's sm breakpoint
     };
-
-    // Set initial state
     handleResize();
-
-    // Add event listener
-    mobileMediaQuery.addListener(handleResize);
-
-    return () => mobileMediaQuery.removeListener(handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <div className="w-full h-[300px] relative overflow-hidden">
+    <div className="w-full h-[200px] relative overflow-hidden">
       <motion.svg
         width="100%"
         height="100%"
@@ -40,17 +34,16 @@ export default function BaldManAnimation() {
           stroke="white"
           strokeWidth="2"
           initial={{ x: 0, y: -30, scale: 0, opacity: 1 }}
-          whileInView={{
+          animate={{
             x: [0, 700],
             y: [0, -30, 0],
             scale: [0, 1.5, 0],
-            opacity: [1, 0.5, 0],
+            opacity: [1, 0.5, 0], // Fade out
           }}
           transition={{
             duration: 1.25,
             ease: "easeInOut",
           }}
-          viewport={{ once: true }} // Ensure animation only runs when the element is in view
         />
 
         {/* Circle 2 */}
@@ -62,17 +55,16 @@ export default function BaldManAnimation() {
           stroke="white"
           strokeWidth="2"
           initial={{ x: 0, y: -50, scale: 0, opacity: 1 }}
-          whileInView={{
+          animate={{
             x: [0, 700],
             y: [0, -50, 0],
             scale: [0, 1.3, 0],
-            opacity: [1, 0.5, 0],
+            opacity: [1, 0.5, 0], // Fade out
           }}
           transition={{
             duration: 1.5,
             ease: "easeInOut",
           }}
-          viewport={{ once: true }}
         />
 
         {/* Circle 3 */}
@@ -84,17 +76,16 @@ export default function BaldManAnimation() {
           stroke="white"
           strokeWidth="2"
           initial={{ x: 0, y: -20, scale: 0, opacity: 1 }}
-          whileInView={{
+          animate={{
             x: [0, 700],
             y: [0, -20, 0],
             scale: [0, 1.4, 0],
-            opacity: [1, 0.5, 0],
+            opacity: [1, 0.5, 0], // Fade out
           }}
           transition={{
             duration: 1,
             ease: "easeInOut",
           }}
-          viewport={{ once: true }}
         />
 
         {/* Circle 4 */}
@@ -106,17 +97,16 @@ export default function BaldManAnimation() {
           stroke="white"
           strokeWidth="2"
           initial={{ x: 0, y: -60, scale: 0, opacity: 1 }}
-          whileInView={{
+          animate={{
             x: [0, 700],
             y: [0, -60, 0],
             scale: [0, 1.6, 0],
-            opacity: [1, 0.5, 0],
+            opacity: [1, 0.5, 0], // Fade out
           }}
           transition={{
             duration: 1.75,
             ease: "easeInOut",
           }}
-          viewport={{ once: true }}
         />
 
         {/* Circular Image Moving to Center */}
@@ -131,12 +121,13 @@ export default function BaldManAnimation() {
               ? { opacity: 0, x: 300, y: 0, scale: 0 }
               : { opacity: 0, x: 0, y: 100, scale: 0 }
           }
-          whileInView={{
+          animate={{
             x: isMobile ? [300] : [0, 340], // Different values for mobile
             y: isMobile ? [0] : [100, 33],
             opacity: [0, 1],
             scale: 1,
           }}
+          whileInView="animate"
           viewport={{ once: true }}
           transition={{
             duration: 0.875,
@@ -157,7 +148,7 @@ export default function BaldManAnimation() {
 
         {/* Gradient Definitions */}
         <defs>
-          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%">
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop
               offset="0%"
               style={{ stopColor: "#FF6F91", stopOpacity: 1 }}
@@ -167,7 +158,7 @@ export default function BaldManAnimation() {
               style={{ stopColor: "#FFC1E3", stopOpacity: 1 }}
             />
           </linearGradient>
-          <linearGradient id="grad2" x1="0%" y1="0%" x2="100%">
+          <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop
               offset="0%"
               style={{ stopColor: "#FFABAB", stopOpacity: 1 }}
@@ -177,7 +168,7 @@ export default function BaldManAnimation() {
               style={{ stopColor: "#FFDAC1", stopOpacity: 1 }}
             />
           </linearGradient>
-          <linearGradient id="grad3" x1="0%" y1="0%" x2="100%">
+          <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop
               offset="0%"
               style={{ stopColor: "#B5EAD7", stopOpacity: 1 }}
@@ -187,7 +178,7 @@ export default function BaldManAnimation() {
               style={{ stopColor: "#C7CEEA", stopOpacity: 1 }}
             />
           </linearGradient>
-          <linearGradient id="grad4" x1="0%" y1="0%" x2="100%">
+          <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop
               offset="0%"
               style={{ stopColor: "#9AECDB", stopOpacity: 1 }}
@@ -195,6 +186,16 @@ export default function BaldManAnimation() {
             <stop
               offset="100%"
               style={{ stopColor: "#55EFC4", stopOpacity: 1 }}
+            />
+          </linearGradient>
+          <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop
+              offset="0%"
+              style={{ stopColor: "#A0E4FF", stopOpacity: 1 }}
+            />
+            <stop
+              offset="100%"
+              style={{ stopColor: "#00E676", stopOpacity: 1 }}
             />
           </linearGradient>
         </defs>
