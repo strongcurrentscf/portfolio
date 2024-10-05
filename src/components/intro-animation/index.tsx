@@ -125,7 +125,7 @@ export default function BaldManAnimation() {
             x: isMobile ? [0] : [-300, 40], // Different values for mobile
             y: isMobile ? [0] : [100, 33],
             opacity: [0, 1],
-            scale: 1,
+            scale: [0, 1],
           }}
           whileInView="animate"
           viewport={{ once: true }}
