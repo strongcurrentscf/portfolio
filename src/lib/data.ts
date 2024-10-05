@@ -59,10 +59,10 @@ export const projectsData = [
     title: "Portfolio",
     description:
       "Portfolio showcasing my skills and experience, with options for visitors to learn more and get in touch with me.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+    tags: ["React", "Serverless Functions", "Tailwind", "Framer"],
     imageUrl: portfolioImg,
-    repository: "https://github.com/Ayaz2589/portfolio",
-    link: "https://portfolio-ayaz2589.vercel.app/",
+    repository: "https://github.com/strongcurrentscf/portfolio",
+    link: "https://www.christianfrancis.dev/",
   },
 ] as const;
 

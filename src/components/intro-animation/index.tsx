@@ -111,18 +111,18 @@ export default function BaldManAnimation() {
 
         {/* Circular Image Moving to Center */}
         <motion.foreignObject
-          x="0"
+          x="300"
           y="0"
           width={isMobile ? "192" : "120"} // Adjust size for mobile
           height={isMobile ? "192" : "120"} // Adjust size for mobile
           className="rounded-full object-cover border-[0.25rem] border-white dark:border-gray-200 shadow-sm"
           initial={
             isMobile
-              ? { opacity: 0, x: 300, y: 0, scale: 0 }
-              : { opacity: 0, x: 0, y: 100, scale: 0 }
+              ? { opacity: 0, x: 0, y: 0, scale: 0 }
+              : { opacity: 0, x: -300, y: 100, scale: 0 }
           }
           animate={{
-            x: isMobile ? [300] : [0, 340], // Different values for mobile
+            x: isMobile ? [0] : [-300, 40], // Different values for mobile
             y: isMobile ? [0] : [100, 33],
             opacity: [0, 1],
             scale: 1,
