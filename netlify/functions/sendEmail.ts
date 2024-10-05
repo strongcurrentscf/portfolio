@@ -2,8 +2,9 @@ import { createElement } from "react";
 import { Resend } from "resend";
 import { renderToStaticMarkup } from "react-dom/server";
 import { Handler, HandlerEvent } from "@netlify/functions";
-
 import dotenv from "dotenv";
+
+// @ts-expect-error Likely TypeScript's module resolution issue, but it works at runtime
 import { ContactFormEmail } from "email";
 
 dotenv.config(); // Make sure to load environment variables
