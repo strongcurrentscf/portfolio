@@ -1,5 +1,5 @@
 import { BaldManAnimation } from "components";
-import { ToggleBtn } from "components";
+// import { ToggleBtn } from "components";
 import { motion } from "framer-motion";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
@@ -79,7 +79,7 @@ export default function Intro() {
         >
           <FaGithubSquare />
         </a>
-        <ToggleBtn />
+        {/* <ToggleBtn /> */}
       </motion.div>
     </section>
   );

@@ -9,6 +9,7 @@ import {
   Experience,
   Contact,
   Footer,
+  ToggleBtn,
 } from "components";
 import { ActiveSectionContextProvider } from "context";
 import { Toaster } from "react-hot-toast";
@@ -29,6 +30,7 @@ export default function App() {
           <Contact />
           <Footer />
         </main>
+        <ToggleBtn position={{ bottom: "2rem", left: "2rem" }} />
         <Toaster position="top-right" />
       </ActiveSectionContextProvider>
     </>
